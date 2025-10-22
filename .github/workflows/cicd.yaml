@@ -1,4 +1,4 @@
-# CICD using GitHub actions
+ # CICD using GitHub actions
 
 name: CI/CD
 
@@ -39,6 +39,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+      # code for static code analysis
     - name: Run golangci-lint
       uses: golangci/golangci-lint-action@v6
       with:
@@ -87,8 +88,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --global user.email "abhishek@gmail.com"
-        git config --global user.name "Abhishek Veeramalla"
+        git config --global user.email "irfanagousia@gmail.com"
+        git config --global user.name "Gousia Irfana"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update tag in Helm chart"
         git push
