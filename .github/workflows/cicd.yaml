@@ -43,7 +43,8 @@ jobs:
     - name: Install golangci-lint
       run: |
        curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
-       export PATH=$PATH:$(pwd)/bin
+       echo "$PWD/bin" >> $GITHUB_PATH
+
 
 
       # Run the linter
