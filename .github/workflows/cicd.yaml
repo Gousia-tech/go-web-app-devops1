@@ -41,13 +41,14 @@ jobs:
 
         # Install golangci-lint manually
     - name: Install golangci-lint
-       run: | 
-          curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
-          export PATH=$PATH:$(pwd)/bin
+      run: |
+       curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s latest
+       export PATH=$PATH:$(pwd)/bin
+
 
       # Run the linter
     - name: Run golangci-lint
-       run: golangci-lint run
+      run: golangci-lint run
 
       # code for static code analysis
     # - name: Run golangci-lint
